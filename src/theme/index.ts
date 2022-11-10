@@ -6,6 +6,9 @@ export default {
     ORANGE_300: "#FF881F",
     ORANGE_500: "#FF671F",
     ORANGE_600: "#FA641E",
+    ORANGE_700: "#E8453E",
+    GRADIENT:
+      "linear-gradient(262deg, rgba(250,100,30,1) 0%, rgba(255,136,31,1) 100%)",
 
     GRAY_100: "#F0F0F0",
     GRAY_200: "#00000029",
