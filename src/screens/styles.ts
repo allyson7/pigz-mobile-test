@@ -1,4 +1,3 @@
-import { TextProps } from "react-native";
 import styled from "styled-components/native";
 
 export const Container = styled.View`
@@ -42,4 +41,21 @@ export const Link = styled.Text`
   font-family: ${({ theme }) => theme.FONT_FAMILY.POPPINS_REG};
 `;
 
-export const Logo = styled.Image``;
+export const BottomText = styled.Text`
+  color: ${({ theme }) => theme.COLORS.GRAY_700};
+  font-size: ${({ theme }) => theme.FONT_SIZE.XS}px;
+  font-family: ${({ theme }) => theme.FONT_FAMILY.POPPINS_SEMIB};
+`;
+
+export const LineStyle = styled.View`
+  flex: 1;
+  height: 1px;
+  margin-left: 8px;
+  background-color: ${({ theme }) => theme.COLORS.GRAY_700};
+`;
+
+export const GoogleButton = styled.TouchableOpacity``;
+
+export const Logo = styled.Image`
+  margin-top: 100px;
+`;

@@ -53,3 +53,26 @@ export const Title = styled.Text<Props>`
   color: ${({ theme, type }) =>
     type === "SECONDARY" ? theme.COLORS.ORANGE_700 : theme.COLORS.WHITE};
 `;
+
+export const GoogleBtn = styled(TouchableOpacity)`
+  flex: 1;
+  flex-direction: row;
+  position: relative;
+
+  min-height: 48px;
+  max-height: 48px;
+  width: 365px;
+  border-radius: 17px;
+
+  background-color: ${({ theme }) => theme.COLORS.WHITE};
+  border: 1px ${({ theme }) => theme.COLORS.GRAY_300};
+
+  justify-content: center;
+  align-items: center;
+  color: ${({ theme }) => theme.COLORS.GRAY_500};
+`;
+
+export const Logo = styled.Image`
+  position: absolute;
+  left: 16px;
+`;

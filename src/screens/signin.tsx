@@ -1,13 +1,22 @@
-import { Container, Content, Header, Link, Logo, Title } from "./styles";
+import {
+  BottomText,
+  Container,
+  Content,
+  Header,
+  LineStyle,
+  Link,
+  Logo,
+  Title,
+} from "./styles";
 import LogoImg from "@assets/images/logo_pigz.png";
-import { Button } from "@components/Button";
+import { Button, GoogleButton } from "@components/Button";
 import { Input, InputPassword } from "@components/Input";
-import { TextProps } from "react-native";
+import { TextProps, View } from "react-native";
 
-export function SignIn({ ...rest }: TextProps) {
+export function SignIn() {
   return (
     <Container>
-      {/* <Logo source={LogoImg} /> */}
+      <Logo source={LogoImg} />
       <Title>Para entregadores</Title>
 
       <Header>Login</Header>
@@ -22,13 +31,25 @@ export function SignIn({ ...rest }: TextProps) {
       </Content>
       <Button title="Entrar" />
 
-      <Content style={{ marginTop: 36, alignSelf: "center" }}>
-        Não tem uma conta?
-        <Link onClick={() => {}} {...rest}>
-          {" "}
-          Criar agora
-        </Link>
-      </Content>
+      <View
+        style={{
+          flex: 1,
+          flexDirection: "row",
+          marginTop: 36,
+        }}
+      >
+        <Content>Não tem uma conta? </Content>
+        <Link onPress={() => {}}>Criar agora</Link>
+      </View>
+
+      <View
+        style={{ flexDirection: "row", marginTop: 97, alignItems: "center" }}
+      >
+        <BottomText>Entrar com</BottomText>
+        <LineStyle />
+      </View>
+
+      <GoogleButton style={{ marginTop: 24 }} title="Continuar com o Google" />
     </Container>
   );
 }

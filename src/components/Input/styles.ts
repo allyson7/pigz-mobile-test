@@ -1,5 +1,6 @@
 import { TextInput } from "react-native";
 import styled from "styled-components/native";
+import { Feather } from "@expo/vector-icons";
 
 export const Container = styled(TextInput)`
   flex: 1;
@@ -17,3 +18,8 @@ export const Container = styled(TextInput)`
   border-radius: 17px;
   padding: 16px;
 `;
+
+export const IconF = styled(Feather).attrs(({ theme }) => ({
+  size: 24,
+  color: theme.COLORS.ORANGE_500,
+}))``;

@@ -1,15 +1,29 @@
-import { TextInputProps } from "react-native";
+import { Pressable, TextInputProps, View } from "react-native";
 
-import { Container } from "./styles";
+import { Container, IconF } from "./styles";
+import { useTogglePasswordVisibility } from "../hooks/useTogglePassword";
 
 export function Input({ ...rest }: TextInputProps) {
-  return <Container {...rest} />;
+  return <Container selectionColor={"orange"} {...rest} />;
 }
 
 export function InputPassword({ ...rest }: TextInputProps) {
+  const { secure, icon, handlePasswordVisibility } =
+    useTogglePasswordVisibility();
   return (
-    <Container keyboardType="default" secureTextEntry={true} {...rest}>
-      {/* <Image></Image> */}
-    </Container>
+    <View style={{ position: "relative" }}>
+      <Container
+        selectionColor={"orange"}
+        keyboardType="default"
+        secureTextEntry={secure}
+        {...rest}
+      />
+      <Pressable
+        onPress={handlePasswordVisibility}
+        style={{ position: "absolute", top: 13, right: 16 }}
+      >
+        <IconF name={icon} />
+      </Pressable>
+    </View>
   );
 }
